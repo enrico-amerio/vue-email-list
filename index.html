@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js' integrity='sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==' crossorigin='anonymous'></script>
+
   <title>Vue Email List</title>
 </head>
 <body>
   <div id="app">
+    <ul>
+      <div v-if="email.length < 10">Loading...</div>
+      <li v-else v-for="user in email">{{user}}</li>
+    </ul>
   </div>
   <script src="js/script.js"></script>
 </body>
